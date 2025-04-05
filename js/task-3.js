@@ -1,3 +1,11 @@
+const sortByDescendingFriendCount = users => {
+  const friendCount = users.toSorted(
+    (firstUser, secondUser) =>
+      secondUser.friends.length - firstUser.friends.length
+  );
+  return friendCount;
+};
+
 //test
 console.log(
   sortByDescendingFriendCount([
@@ -38,6 +46,7 @@ console.log(
     },
   ])
 );
+
 // [
 //   {
 //     name: "Ross Vazquez",
