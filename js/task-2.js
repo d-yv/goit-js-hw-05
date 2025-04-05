@@ -30,7 +30,13 @@ const allUsers = [
   },
 ];
 
-console.log(getUsersWithFriend(allUsers, 'Briana Decker'));
+const getUsersWithFriend = (users, friendName) => {
+  const friends = users.filter(user => user.friends.includes(friendName));
+  return friends;
+};
+
+// test
+console.log('friend Briana', getUsersWithFriend(allUsers, 'Briana Decker'));
 // [
 //   {
 //     name: "Sharlene Bush",
@@ -42,7 +48,7 @@ console.log(getUsersWithFriend(allUsers, 'Briana Decker'));
 //   }
 // ]
 
-console.log(getUsersWithFriend(allUsers, 'Goldie Gentry'));
+console.log('friend Goldie', getUsersWithFriend(allUsers, 'Goldie Gentry'));
 // [
 //   {
 //     name: "Elma Head",
@@ -54,4 +60,5 @@ console.log(getUsersWithFriend(allUsers, 'Goldie Gentry'));
 //   }
 // ]
 
-console.log(getUsersWithFriend(allUsers, 'Adrian Cross')); // []
+console.log('friend Adrin', getUsersWithFriend(allUsers, 'Adrian Cross'));
+// []

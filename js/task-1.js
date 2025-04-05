@@ -1,3 +1,11 @@
+const getUserNames = users => {
+  let usersAray = [];
+  users.forEach(element => {
+    usersAray.push(element.name);
+  });
+  return usersAray;
+};
+
 // test
 console.log(
   getUserNames([
