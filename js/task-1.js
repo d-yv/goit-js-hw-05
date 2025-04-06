@@ -1,8 +1,5 @@
 const getUserNames = users => {
-  let usersAray = [];
-  users.forEach(element => {
-    usersAray.push(element.name);
-  });
+  const usersAray = users.map(element => element.name);
   return usersAray;
 };
 
